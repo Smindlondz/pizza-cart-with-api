@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 1em;
+  padding: 0.3em;
+margin-top: -1em;
+}
+/* To make sure that my screen is flexible with content */
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+.cart {
+  padding: 1em;
+  margin: 1em;
+}
+.col {
+  color: #6C3483;
+}
+
+body {
+  background-color: #F2F4F4;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  color: #6C3483;
+/* font-size: 25px; */
+}
+.deal {
+  color: #6C3483;
+  font-size: larger;
+  font-style: normal;
+
+}
+
+h3 {
+  color: #fff;
+  margin: 1em;
+}
+.add {
+  padding: 1em;
+  margin: 1em;
+  margin-bottom: 1em;
+  font-weight: bolder;
+  border: 1em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  width: 3em;
+  background-color: #CCD1D1;
+}
+
+button {
+  padding: 1em;
+  margin: 1em;
+  margin-bottom: 1em;
+  font-weight: bolder;
+  border: 1em;
+  border-radius: 1.5em;
+  cursor: pointer;
+  /* width: 3em; */
+  background-color: #CCD1D1;
+}
+.text {
+  font-weight: 550;
+}
+
+.box {
+  border: 3px solid whitesmoke;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+
+.small {
+  background-color: #ff5400;
+}
+
+.medium {
+  background-color: #ff0054;
+}
+
+.large {
+  background-color: #9e0059;
+}
+
+.contacts {
+  background-color: #390099;
+  color: white;
+  /* font-weight: 600; */
+
+}
+
+@media (min-width: 900px) {
+  .pizzas {
+      display: flex;
+  }
+  .cart-B {
+      width: fit-content;
+  }
+  .cart-cont-A {
+      width: 40%;
+  } 
+}
+@media (max-width: 900px) {
+  .cart-icon i{
+      display: flex;
+  }
+}
+/* Style buttons */
+.btn {
+  background-color: DodgerBlue;
+  /* Blue background */
+  border: none;
+  /* Remove borders */
+  color: white;
+  /* White text */
+  padding: 12px 16px;
+  /* Some padding */
+  font-size: 16px;
+  /* Set a font size */
+  cursor: pointer;
+  /* Mouse pointer on hover */
+  /* justify-content: flex-end; */
+  /* display: flex; */
+} 
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.cart-icon {
+  float: right;
+  margin-bottom: 1em;
+}
+.cart-icon i {
+  font-size: 30px;
+  color: dodgerblue;
+  cursor: pointer;
+  /* float: right; */
+  justify-content: space-evenly;
+}
+
+.cart-icon > i:hover {
+  color: royalblue;
+}
+
+.cart-B {
+  margin: 80px auto;
+  /* width: 70%; */
+margin-top: -1em;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 25px 40px #1687d933;
+  overflow-x: auto; /*To make sure that table is responsive */
+}
+.c2 {
+  margin-top: 2em;
+  text-align: center;
+  font-style: normal;
+  font-size: 13px;
+  color: gray;
+}
+.cart-cont-A {
+  margin: 80px auto;
+  height: 85%;
+  /* width: 40%; */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 25px 40px #1687d933;
+  padding: 1em;
+  text-align: right;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+input {
+  margin: 0.8em;
+  padding: 0.8em;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1em;
+  align-items: center;
+}
+tr {
+  margin-top: 1em;
+}
+table th {
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background-color: #6C3483;
+  font-style: normal;
+}
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  /* border-top: 3px solid #6C3483; */
+}
+td a {
+  color:#6C3483;
+  font-size: 12px;
+}
+td img {
+  width: 150px;
+  margin: 20px;
+}
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  
+}
+.total-price table {
+  width: 100%;
+  max-width: 400px;
+}
+td {
+  border-bottom: 2px solid #E5E8E8;
+}
+
+td:last-child {
+  text-align: center;
+ 
+}
+/* To align data in the table*/
+th:last-child {
+  text-align: center;
+  
+}
+.message{
+color:#52c41a;;
+font-weight: bold;
+font-style: normal;
+}
+
+.format {
+color: red;
+margin-top: 1em;
+}
+.success {
+  color: #525050;
+}
+
+td input {
+color: black;
+width: 80px;
+}
+.q {
+  font-size: 17px;
+  font-style: normal;
+  font-weight:480;
+}
+.size {
+  font-size: 16px;
+  font-style: normal;
+  color: #808B96;
+}
+.nice {
+box-sizing: border-box;
+background-color: #F5B041;
+border: 1px solid #F5B041;
+border-radius: 0.6em;
+color: #6C3483;
+cursor: pointer;
+display: flex;
+line-height: 1;
+padding: 1.2em 2.8em;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Montserrat', sans-serif;
+font-weight: 550;
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  width: 130px;
+display:grid;
+}
+
+nice:hover {
+  color: #fff;
+  outline: 0;
+}
