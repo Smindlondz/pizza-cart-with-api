@@ -99,12 +99,12 @@ document.addEventListener('alpine:init', () => {
 
                         } else if (this.paymentAmount < this.cart.total){
                             this.paymentMessege = 'Sorry - that is not enough money!'
-                            // setTimeout(() => {
-                            //     this.cart.total = 0;
-                            //     this.paymentMessege = '';
-                            //     this.paymentAmount = 0;
-                            //     remove();
-                            // }, 3000);
+                            setTimeout(() => {
+                                this.cart.total = 0;
+                                this.paymentMessege = '';
+                                this.paymentAmount = 0;
+                                remove();
+                            }, 3000);
                         }
 
                     })
