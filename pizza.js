@@ -33,7 +33,7 @@ document.addEventListener('alpine:init', () => {
                return axios.get('https://pizza-cart-api.herokuapp.com/api/pizza-cart/create?username=' + this.username)
             },
             createImg(pizza) {
-                return `/images/${pizza.size}.png`;
+                return `./images/${pizza.size}.png`;
             },
 
             showCart() {
@@ -73,6 +73,30 @@ document.addEventListener('alpine:init', () => {
                     .catch(err => alert(err));
 
             },
+            featuredPizzas(){
+                //Get a list of featured pizzas
+                return axios
+                    .get('https://pizza-cart-api.herokuapp.com/api/pizzas/featured')
+              },
+            //   postfeaturedPizzas(){
+            //     //Get a list of featured pizzas
+            //     let list = featuredPizzas()
+            //     for (let i = 0; i < list.length; i++) {
+            //         return axios.post('https://pizza-cart-api.herokuapp.com/api/pizzas/featured')
+            //         .then(()=>{
+
+            //         })
+            //     }
+            //     return axios
+            //         .post('')
+            //         .then(()=>{
+                      
+            //           for (let i = 0;  i < 4; i++) {
+            //             return !this.postfeaturedPizzas();
+            //           }
+                      
+            //         })
+            //   },
 
             pay() {
                 const params = {
@@ -98,13 +122,13 @@ document.addEventListener('alpine:init', () => {
                             }, 3000);
 
                         } else if (this.paymentAmount < this.cart.total){
-                            this.paymentMessege = 'Sorry - that is not enough money!'
-                            setTimeout(() => {
-                                this.cart.total = 0;
-                                this.paymentMessege = '';
-                                this.paymentAmount = 0;
-                                remove();
-                            }, 3000);
+                            this.paymentMessege = 'Payment Declined !'
+                            // setTimeout(() => {
+                            //     this.cart.total = 0;
+                            //     this.paymentMessege = '';
+                            //     this.paymentAmount = 0;
+                            //     remove();
+                            // }, 3000);
                         }
 
                     })

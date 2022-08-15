@@ -31,7 +31,7 @@
         <div x-text="cartId"></div>
 
 
-        <div  x-show="cart.total.toFixed(2)>0" >
+        <div x-show="cart.total.toFixed(2)>0">
             <table style="border: 1px #E5E8E8 solid;">
                 <tr>
                     <div class="cart-title">
@@ -70,7 +70,7 @@
                             <div class="q">
                                 R <span x-text="cart.total.toFixed(2)"></span>
                             </div>
-                            
+
                         </td>
                     </tr>
                     <tr>
@@ -80,13 +80,13 @@
                                 <button x-show="!payNow" x-on:click="payNow=true" class="nice">Checkout</button>
                             </td>
                         </div>
-                        
+
                     </tr>
                     <tr x-show="payNow">
                         <td>
                             <div class="q format" x-text="paymentMessege">Message....</div>
                         </td>
-                        
+
                     </tr>
 
                     <tr class="success" x-show="payNow">
@@ -97,7 +97,7 @@
                     </tr>
                     <tr x-show="payNow">
                         <td></td>
-                        <td >
+                        <td>
                             <button x-on:click="pay" class="nice">PayNow</button>
                         </td>
                     </tr>
@@ -111,7 +111,7 @@
 
         <div class="q" x-text="pizzas.length"></div>
 
-        
+
         <table>
             <template x-for="pizza in pizzas">
 
@@ -137,44 +137,47 @@
 
     </div>
     <div class="pizzas">
-        <div class="small box">
-            <h2>Small Pizza</h2>
-            <img src="images/small.png" width="200">
-            <div class="text">
-                Small pizza with 3 toppings 1 meat topping, 3 or less other toppings.
+        <template x-for="pizza in cart.pizzas">
+            <div class="small box">
+                <h2 x-text="pizza.size"></h2>
+                <img x-bind:src="createImg(pizza)" width="200">
+                <!-- <div class="text">
+                    Small pizza with 3 toppings 1 meat topping, 3 or less other toppings.
+                </div> -->
+                R <h3>x-text="pizza.price"</h3>
+                <button  @click="add(pizza)">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+                </button>
             </div>
-            <h3>R34.50</h3>
-            <button x-on:click="buySmall">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
-            </button>
-        </div>
-        <div class="medium box">
-            <h2>Medium Pizza</h2>
-            <img src="images/medium.png" width="200">
+            <!-- <div class="medium box">
+                <h2>Medium Pizza</h2>
+                <img x-bind:src="createImg(pizza)" width="200">
 
-            <div class="text">
-                Medium margeritha pizza with 3 toppings max, 2 orless meat topping. 3 or less toppings.
-            </div>
-            <h3>R52.40</h3>
-            <button x-on:click="buyMedium">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
-            </button>
+                <div class="text">
+                    Medium margeritha pizza with 3 toppings max, 2 orless meat topping. 3 or less toppings.
+                </div>
+                R <h3>x-text="pizza.price"</h3>
+                <button  x-on:click="setFeaturedPizza(pizza, false)">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+                </button>
 
-        </div>
+            </div> -->
 
-        <div class="large box">
-            <h2>Large Pizza</h2>
-            <img src="images/large.png" width="200">
+            <!-- <div class="large box">
+                <h2>Large Pizza</h2>
+                <img x-bind:src="createImg(pizza)" width="200">
 
-            <div class="text">
-                large margetha pizza with 3 toppings max. 3 meat topping max. 3 or less other toppings.
-            </div>
-            <h3>R109.99</h3>
-            <button x-on:click="buyLarge">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
-            </button>
+                <div class="text">
+                    large margetha pizza with 3 toppings max. 3 meat topping max. 3 or less other toppings.
+                </div>
+                R <h3>x-text="pizza.price"</h3>
+                <button  x-on:click="setFeaturedPizza(pizza, false)">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+                </button>
 
-        </div>
+            </div> -->
+
+        </template>
 
     </div>
 
