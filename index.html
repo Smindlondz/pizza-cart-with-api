@@ -136,53 +136,7 @@
         </table>
 
     </div>
-    <div class="pizzas">
-        <template x-for="pizza in cart.pizzas">
-            <div class="small box">
-                <h2 x-text="pizza.size"></h2>
-                <img x-bind:src="createImg(pizza)" width="200">
-                <!-- <div class="text">
-                    Small pizza with 3 toppings 1 meat topping, 3 or less other toppings.
-                </div> -->
-                R <h3>x-text="pizza.price"</h3>
-                <button  @click="add(pizza)">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
-                </button>
-            </div>
-            <!-- <div class="medium box">
-                <h2>Medium Pizza</h2>
-                <img x-bind:src="createImg(pizza)" width="200">
-
-                <div class="text">
-                    Medium margeritha pizza with 3 toppings max, 2 orless meat topping. 3 or less toppings.
-                </div>
-                R <h3>x-text="pizza.price"</h3>
-                <button  x-on:click="setFeaturedPizza(pizza, false)">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
-                </button>
-
-            </div> -->
-
-            <!-- <div class="large box">
-                <h2>Large Pizza</h2>
-                <img x-bind:src="createImg(pizza)" width="200">
-
-                <div class="text">
-                    large margetha pizza with 3 toppings max. 3 meat topping max. 3 or less other toppings.
-                </div>
-                R <h3>x-text="pizza.price"</h3>
-                <button  x-on:click="setFeaturedPizza(pizza, false)">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
-                </button>
-
-            </div> -->
-
-        </template>
-
-    </div>
-
-
-
+   
     <div class="contacts box">
 
         <h2>Contact Details</h2>

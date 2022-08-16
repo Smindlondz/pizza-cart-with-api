@@ -297,3 +297,15 @@ nice:hover {
   color: #fff;
   outline: 0;
 }
+.row {
+  margin-top: 70px;
+}
+.col-4{
+  flex-basis: 30%;
+  padding: 10px;
+  min-width: 250px;
+  margin-bottom: 50px;
+  border: 3px solid whitesmoke;
+  background-color: #ff5400;
+
+}
