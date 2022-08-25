@@ -4,7 +4,7 @@ document.addEventListener('alpine:init', () => {
         return {
 
             pizzas: [],
-            username: '',
+            username: 'Mandla',
             cartId: '',
             cart: { total: 0.00 },
             paymentMessege: '',
