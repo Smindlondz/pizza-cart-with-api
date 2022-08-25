@@ -58,7 +58,9 @@
                             <button class="q add" @click="add(pizza)"><b>+</b> </button>
                         </td>
 
-                        <td x-text="pizza.total.toFixed(2)"></td>
+                        <td>
+                            R <span x-text="pizza.total.toFixed(2)"></span>
+                        </td>
                     </tr>
                 </template>
             </table>
